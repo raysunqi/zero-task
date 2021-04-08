@@ -1,0 +1,27 @@
+<div class="container d-flex justify-content-between py-4 border-bottom"
+     role="banner">
+  <img src="/assets/Zero.png"
+       style="width: 60px;"
+       alt="image">
+  <div>
+    <a href="#">About</a>
+    <a href="#"
+       class="ml-3">FAQs</a>
+  </div>
+</div>
+
+<div class="container py-5"
+     role="main">
+  <h2 class="py-1">Departments</h2>
+
+  <div class="d-flex">
+    <div *ngFor="let department of departments;let i=index;">
+      <app-department name={{department.name}}
+                      [manager]=getManger(department)
+                      [totalEmployees]="department.employees.length"
+                      color={{getColor(i)}}
+                      width={{getWidth(department)}}
+                      height={{(i+1)*50}}></app-department>
+    </div>
+  </div>
+</div>

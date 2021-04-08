@@ -1,0 +1,10 @@
+<div
+     [style.border-color]="color"
+     [style.height]="height*2+ 'px'"
+     [style.width]="width+ 'px'"
+     [style.padding-top]="height+ 'px'"
+     class="department px-1">
+  <div><strong>{{name}}</strong></div>
+  <div>{{manager}}</div>
+  <div>{{totalEmployees}} {{totalEmployees == 1 ? 'employee':'employees'}}</div>
+</div>
